@@ -1,25 +1,25 @@
-//nin...........................
-https://developers.roqqu.com/reference#nin-verification
+SIMPLE FINTECH APPLICATION.
 
-//.....................important url.......................
-https://www.digitalocean.com/community/tutorials/how-to-handle-routing-in-react-apps-with-react-router
+A simple application built with nodejs, enables a user to register, login, create deposit and get an account number with which he/she can receive a funds and also user is able to make transfers to other banks.
 
-//.....................knex js...............
-https://dev.to/itachiuchiha/building-and-running-sql-queries-with-knex-js-55d4
+STEPS TO START UP AND USE APP.
 
-///cors.........................
-https://medium.com/zero-equals-false/using-cors-in-express-cac7e29b005b#:~:text=Enabling%20CORS,using%20the%20cors%20npm%20module.&text=That's%20it.,CORS%20is%20now%20enabled.&text=The%20Access%2DControl%2DAllow%2D,allows%20access%20from%20any%20origin).
+1) Clone repository.
+2) Run `npm install` to install dependencies.
+3) Rename example.config.env to config.env
+4) Run `nodemon` or `node app` to start application
+5) visit link: https://documenter.getpostman.com/view/15717572/2s8YYEMPeh for the end points
+6) First Create an account using register endpoint. you will a token sent to our email address. Emails will be delivered to the mailtrap account below
 
-//validation in node
-https://blog.logrocket.com/how-to-handle-data-validation-in-node-using-validatorjs/
-https://github.com/mikeerickson/validatorjs
+*****login to this mail trap account to get mail, or u can setup up smtp of ur choice as app uses nodemailer****
+https://mailtrap.io/
+Email Address: realtestzer13@gmail.com
+password:jbe7GTf0Ye8W
 
-//..............more on knejs
-https://gist.github.com/NigelEarle/70db130cc040cc2868555b29a0278261
-
-
-twilio recovery code:aiJbjyDSK9BRbU1AMktSuMr3T-KAlaNXNapfr392
-
-
-TWILIO_ACCOUNT_SID=AC398bd8fc6f12f16eb4b49989e7423cf8
-TWILIO_AUTH_TOKEN=301399ebfaf4c7e0d240283131ba0e9b
+7) Supply the token sent to your email to activate account, you can resend mail if you didnt get it.
+8) Use login endpoint to login, you will be required to authenticate login as a code will be delivered to your email address.
+9) Supply code via the Authenticate Code endpoint to continue
+10) Visit the `receive money` endpoint to create an account number and receive money from any one.
+11) Visit the `make transfer` endpoint to transfer mone to any account number of nigerian bank.
+12) You can get bank list via the `GetBank` end point
+13) The `view user transaction`, `view user deposit` and `view user transfer` are endpoints respectivel for viewing user`s Transaction history, deposit history and transfer history.
