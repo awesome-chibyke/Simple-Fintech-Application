@@ -20,6 +20,9 @@ const CreateTransactions = require("./routes/fintechRoutes/CreateTransactions");
 const resendActivationEmailRoute = require("./routes/fintechRoutes/resendActivationEmailRoute");
 const WebHookUpdateRoute = require("./routes/fintechRoutes/WebHookUpdateRoute");
 const WebHookTestRoute = require("./routes/fintechRoutes/WebHookTestRoute");
+const DepositsRoute = require("./routes/fintechRoutes/DepositsRoute");
+const TransferHistoryRoutes = require("./routes/fintechRoutes/TransferHistoryRoutes");
+const TransactionsRoute = require("./routes/fintechRoutes/TransactionsRoute");
 
 var device = require("express-device");
 
@@ -81,6 +84,9 @@ app.use("/user-profile", ProfileRoute);
 app.use("/create-transaction", CreateTransactions);
 app.use("/update-webhook", WebHookUpdateRoute);
 app.use("/test-webhook", WebHookTestRoute);
+app.use("/view-deposits", DepositsRoute);
+app.use("/view-transfers", TransferHistoryRoutes);
+app.use("/view-transaction", TransactionsRoute);
 
 io.on("connection", (socket) => {
   socket.on("disconnect", () => {

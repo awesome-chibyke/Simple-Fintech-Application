@@ -32,12 +32,12 @@ class TransactionHistory {
     this.viewObject = {};
   }
 
-  async Deposits() {
+  async Deposits(req, res) {
     try {
       let userObject = await authData(req);
       userObject = userObject.user;
 
-      let depostTransactions = await this.DbActions.selectAllData(
+      let depostTransactions = await this.DbActions.selectBulkData(
         "transactions",
         {
           filteringConditions: [
@@ -57,11 +57,11 @@ class TransactionHistory {
     }
   }
 
-  async Transfers() {
+  async Transfers(req, res) {
     try {
       let userObject = await authData(req);
       userObject = userObject.user;
-      let transferTransactions = await this.DbActions.selectAllData(
+      let transferTransactions = await this.DbActions.selectBulkData(
         "transactions",
         {
           filteringConditions: [
@@ -81,11 +81,11 @@ class TransactionHistory {
     }
   }
 
-  async Transactions() {
+  async Transactions(req, res) {
     try {
       let userObject = await authData(req);
       userObject = userObject.user;
-      let transactions = await this.DbActions.selectAllData("transactions", {
+      let transactions = await this.DbActions.selectBulkData("transactions", {
         filteringConditions: [["user_unique_id", "=", userObject.unique_id]],
       });
 
