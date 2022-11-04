@@ -6,10 +6,11 @@ STEPS TO START UP AND USE APP.
 
 1) Clone repository.
 2) Run `npm install` to install dependencies.
-3) Rename example.config.env to config.env
-4) Run `nodemon` or `node app` to start application
-5) visit link: https://documenter.getpostman.com/view/15717572/2s8YYEMPeh for the end points
-6) First Create an account using register endpoint. you will a token sent to our email address. Emails will be delivered to the mailtrap account below
+3) Rename example.config.env to config.env.
+4) Run `npm run knex migrate:latest` to run migrations.
+5) Run `nodemon` or `node app` to start application
+6) visit link: https://documenter.getpostman.com/view/15717572/2s8YYEMPeh for the end points
+7) First Create an account using register endpoint. you will a token sent to our email address. Emails will be delivered to the mailtrap account below
 
 *****login to this mail trap account to get mail, or u can setup up smtp of ur choice as app uses nodemailer****
 https://mailtrap.io/
